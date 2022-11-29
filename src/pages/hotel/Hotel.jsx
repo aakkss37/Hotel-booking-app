@@ -5,7 +5,7 @@ const Hotel = () => {
                 <div>
                         Hotel
                 </div>
-        );
+        ); 
 }
 
 export default Hotel;
