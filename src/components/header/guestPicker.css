@@ -1,0 +1,56 @@
+.options{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        background-color: white;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        border-radius: 3px;
+}
+.optionItem{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        font-size: 18px;
+}
+.optionInput{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: black;
+        font-size: 15px;
+}
+.decreaseCount,
+.increaseCount{
+        width: 20px;
+        height: 20px;
+        border: none;
+        border: 0.5px solid rgb(255, 60, 0);
+        background-color: white;
+        border-radius: 3px;
+        cursor: pointer;
+}
+.add{
+        margin: 5px 13px;
+        align-self: flex-end;
+        padding: 0px 20px;
+        background-color: rgb(255, 60, 0);
+        color: white;
+        border: none;
+        border-radius: 5px;
+}
+.add:hover{
+        box-shadow: 0px 1px 3px #666666;
+        cursor: pointer;
+}
+
+.guestInput{
+        border: none;
+        width: 10px;
+        direction: unset;
+        border-radius: 0px;
+        outline: none;
+        color: black;
+}

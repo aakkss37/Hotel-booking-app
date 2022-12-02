@@ -1,13 +1,21 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
+import Featured from '../../components/featured/Featured';
+import Header from '../../components/header/header';
+import Navbar from '../../components/navbar/Navbar'
+import "./home.css"
 
-const Home = ()=> {
+const Home = () => {
   return (
     <div>
-        <Navbar/>
-        <h1>hello world</h1>
+      <Navbar />
+      <Header />
+      <section className='homeSection'>
+        <div className="homeContainer">
+          <Featured/>
+        </div>
+      </section>
     </div>
   )
 }
 
-export default Home
+export default Home;

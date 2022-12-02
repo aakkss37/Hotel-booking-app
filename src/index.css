@@ -1,4 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
 *{
-        margin: 0;
+        box-sizing: border-box;
         padding: 0;
+        margin: 0;
+        scroll-behavior: smooth;
+        font-family: 'Ubuntu', sans-serif;
+}
+
+
+:root {
+
+        --gradient-text: linear-gradient(to right, #AE67FA 4%, #F49867 100%);
+        /* --gradient-bar: linear-gradient(103.22deg, #fa67c2 -13.86%, #f50000 99.55%); */
+        --gradient-bar:linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(246, 66, 227, 1) 45%, rgba(255, 0, 0, 1) 100%);
+        --color-bg: linear-gradient(90deg, rgb(54, 54, 54) 40%, rgba(0, 0, 0, 1) 100%);
+        /* --color-footer: #031B34;
+        --color-blog: #042c54;
+        --color-text: #81AFDD;
+        --color-subtext: #FF8A71; */
 }

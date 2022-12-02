@@ -1,0 +1,28 @@
+.headerListItem {
+        display: flex;
+        align-items: center;
+        gap: 7.5px;
+        padding: 3px;
+        box-shadow: rgba(189, 188, 188, 0.12) 0px 0.5px, rgba(255, 255, 255, 0.116) 0px 0.5px;
+        cursor: default;
+}
+
+.headerListItem.active {
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 20px;
+}
+
+.headerListItem:hover {
+        animation: text-shadow-pop 0.2s both;
+}
+
+@keyframes text-shadow-pop {
+        0% {
+                transform: translateY(0);
+        }
+
+        100% {
+                transform: translateY(-6px);
+        }
+}

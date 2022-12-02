@@ -1,6 +1,6 @@
 import React from 'react';
 import "./navbar.css"
-import logo from '../asset/logo.png'
+import logo from '../../asset/logo.png'
 
 const Navbar = () => {
         return (
@@ -8,8 +8,8 @@ const Navbar = () => {
                          <div className="navContainer">
                                 
                                 <span className="logo">
-                                        <img src={logo} alt="Logo" className="src" />
-                                        <h1>AKS Residency</h1>
+                                        <img src={logo} alt="logo" className="logo" />
+                                        <h1>AKS Booking</h1>
                                 </span>
                                 
                                 <div className="navItems">
@@ -20,5 +20,5 @@ const Navbar = () => {
                 </div>
         );
 }
- 
+
 export default Navbar;

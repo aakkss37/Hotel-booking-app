@@ -1,38 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
 .navbar{
-        background: linear-gradient(90deg, rgb(54, 54, 54) 40%, rgba(0, 0, 0, 1) 100%);
+        background: var(--color-bg);
         height: 50px;
         display: flex;
         justify-content: center;
 }
 .navContainer{
+        margin: 5px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         /* width: -webkit-fill-available; */
         /* OR */
         width: 100%;
-        max-width: 1080px;
+        max-width: 1240px;
         color: aliceblue;
 }
 .logo{
-        font-family: 'Ubuntu', sans-serif;
+        font-family: var(--font-family);
         display: flex;
         align-items: center;
 }
 .logo h1{
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 14px;
+        font-family: var(--font-family);
+        font-size: 15px;
         margin: 5px;
         color:rgb(171 171 171);
 }
-img{
+img.logo{
         width: 30px;
         height: 25px;
 }
 .navButton{
-        background: rgb(255, 48, 2);
-        border: none;
         border-radius: 5px;
         color: rgb(255 255 255);
         cursor: pointer;
@@ -43,6 +42,10 @@ img{
 .regester{
         border: 1px rgb(255, 48, 2) solid;
         background: transparent;
+}
+.login{
+        background: rgb(255, 48, 2);
+        border: none;
 }
 
 
