@@ -5,11 +5,20 @@
 .homeContainer {
         margin-top: 50px;
         margin-bottom: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        gap: 35px;
         width: 100%;
         max-width: 1240px;
+}
+.browswPropertyType{
+        margin: 0;
+        padding: 0;
+}
+.browswPropertyType__text{
+        color: rgb(255, 48, 2);
+        margin: 30px 5px;
+        margin-bottom: 5px;
+        padding-left: 10px;
+}
+.browswPropertyType__text .quote{
+        font-weight: 500;
+        color: rgb(66, 66, 66);
 }

@@ -3,9 +3,9 @@ import React from 'react';
 const Hotel = () => {
         return (
                 <div>
-                        Hotel
+                        hotel
                 </div>
-        ); 
+        );
 }
 
 export default Hotel;

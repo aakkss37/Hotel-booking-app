@@ -2,6 +2,8 @@ import React from 'react'
 import Featured from '../../components/featured/Featured';
 import Header from '../../components/header/header';
 import Navbar from '../../components/navbar/Navbar'
+import PropertyType from '../../components/propertyType/PropertyType';
+import TravelType from '../../components/travelType/TravelType';
 import "./home.css"
 
 const Home = () => {
@@ -11,7 +13,18 @@ const Home = () => {
       <Header />
       <section className='homeSection'>
         <div className="homeContainer">
-          <Featured/>
+          <Featured />
+          <div className="browswPropertyType">
+            <div className="browswPropertyType__text">
+              <h1 className='homeTitle'>Browse by property type.</h1>
+              <span className='quote'>
+                The world’s top places to celebrate life. <br/>
+                Let your imagination run wild in these top spooky places to celebrate Halloween.
+              </span>
+            </div>
+            <PropertyType />
+          </div>
+          <TravelType />
         </div>
       </section>
     </div>
