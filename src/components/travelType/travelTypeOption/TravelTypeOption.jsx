@@ -5,37 +5,41 @@ import { faBowlFood, faCity, faPersonBiking, faPersonSkiing, faUmbrellaBeach } f
 import React, {useState} from 'react'
 
 
-const TravelTypeOption = () => {
-        const [activeIcon, setActiveIcon] = useState('');
-        
+const TravelTypeOption = (props) => {
+        const [activeOption, setActiveOption] = useState('');
+        const onClickHandler = (clickedOption)=>{
+                setActiveOption(clickedOption);
+                props.onOptionChoose(clickedOption);
+        }        
+
         return (
                 <div className='travelTypeOptionContainer'>
                        
-                        <div className={`travelTypeIcon ${activeIcon === 'ski' && " active"}`} onClick={() => { setActiveIcon('ski') }}>
+                        <div className={`travelTypeIcon ${activeOption === 'ski' && " active"}`} onClick={() => { onClickHandler('ski') }}>
                                 <FontAwesomeIcon icon={faPersonSkiing} />
                                 <span> Ski</span>
                         </div>
-                        <div className={`travelTypeIcon ${activeIcon === 'beach' && " active"}`} onClick={() => { setActiveIcon('beach') }}>
+                        <div className={`travelTypeIcon ${activeOption === 'beach' && " active"}`} onClick={() => { onClickHandler('beach') }}>
                                 <FontAwesomeIcon icon={faUmbrellaBeach} />
                                 <span> Beach</span>
                         </div>
-                        <div className={`travelTypeIcon ${activeIcon === 'relax' && " active"}`} onClick={() => { setActiveIcon('relax') }}>
+                        <div className={`travelTypeIcon ${activeOption === 'relax' && " active"}`} onClick={() => { onClickHandler('relax') }}>
                                 <FontAwesomeIcon icon={faSmile} />
                                 <span> Relax</span>
                         </div>
-                        <div className={`travelTypeIcon ${activeIcon === 'outdoor' && " active"}`} onClick={() => { setActiveIcon('outdoor') }}>
+                        <div className={`travelTypeIcon ${activeOption === 'outdoor' && " active"}`} onClick={() => { onClickHandler('outdoor') }}>
                                 <FontAwesomeIcon icon={faPersonBiking} />
                                 <span> Outdoor</span>
                         </div>
-                        <div className={`travelTypeIcon ${activeIcon === 'romance' && " active"}`} onClick={() => { setActiveIcon('romance') }}>
+                        <div className={`travelTypeIcon ${activeOption === 'romance' && " active"}`} onClick={() => { onClickHandler('romance') }}>
                                 <FontAwesomeIcon icon={faHeart} />
                                 <span> Romance</span>
                         </div >
-                        <div className={`travelTypeIcon ${activeIcon === 'city' && " action"}`} onClick={() => { setActiveIcon('city') }}>
+                        <div className={`travelTypeIcon ${activeOption === 'city' && " active"}`} onClick={() => { onClickHandler('city') }}>
                                 <FontAwesomeIcon icon={faCity} />
                                 <span> City</span>
                         </div>
-                        <div className={`travelTypeIcon ${activeIcon === 'food' && " active"}`} onClick={() => { setActiveIcon('food') }}>
+                        <div className={`travelTypeIcon ${activeOption === 'food' && " active"}`} onClick={() => { onClickHandler('food') }}>
                                 <FontAwesomeIcon icon={faBowlFood} />
                                 <span> Food</span>
                         </div>

@@ -1,10 +1,22 @@
 import "./travelType.css";
 
-import React from 'react'
+import React, {useState} from 'react'
 import TravelTypeOption from "./travelTypeOption/TravelTypeOption";
 import Ski from "./travelTypeResult/Ski";
+import Beach from "./travelTypeResult/Beach";
+import Relax from "./travelTypeResult/Relax";
+import Outdoor from "./travelTypeResult/Outdoor";
+import Romance from "./travelTypeResult/Romance";
+import City from "./travelTypeResult/City";
+import Food from "./travelTypeResult/Food";
 
 const TravelType = () => {
+        const [travelType, setTravelType] = useState('');
+        const onOptionChooseHandler = (chosedOption)=>{
+                console.log("choseOption ----->>>>> ",chosedOption)
+                setTravelType(chosedOption);
+                console.log("travelType ------>>>>>", travelType)
+        }
         return (
                 <div className="travelType">
                         <div className="travelTypeText">
@@ -14,10 +26,16 @@ const TravelType = () => {
                         </div>
                         <div className="travelTypeContainer">
                                 <div className="travelTypeOption">
-                                        <TravelTypeOption/>
-                                </div>
+                                        <TravelTypeOption onOptionChoose={onOptionChooseHandler}/>
+                                </div> 
                                 <div className="travelTypeResult">
-                                        <Ski/>     
+                                        {travelType === "ski" && <Ski/>}     
+                                        {travelType === "beach" && <Beach/>}     
+                                        {travelType === "relax" && <Relax/>}     
+                                        {travelType === "outdoor" && <Outdoor/>}     
+                                        {travelType === "romance" && <Romance/>}     
+                                        {travelType === "city" && <City/>}     
+                                        {travelType === "food" && <Food/>}     
                                 </div>
                         </div>
 

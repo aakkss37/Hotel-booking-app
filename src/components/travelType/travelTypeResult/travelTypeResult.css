@@ -1,8 +1,9 @@
 .travelTypeCardContainer {
-        border-radius: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         display: flex;
         flex-direction: row;
-        justify-content: start;
+        justify-content: flex-start;
         gap: 30px;
         /* flex-wrap: wrap; */
         overflow-x: scroll;
