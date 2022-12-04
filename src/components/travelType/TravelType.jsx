@@ -8,10 +8,9 @@ import Relax from "./travelTypeResult/Relax";
 import Outdoor from "./travelTypeResult/Outdoor";
 import Romance from "./travelTypeResult/Romance";
 import City from "./travelTypeResult/City";
-import Food from "./travelTypeResult/Food";
 
 const TravelType = () => {
-        const [travelType, setTravelType] = useState('');
+        const [travelType, setTravelType] = useState('ski');
         const onOptionChooseHandler = (chosedOption)=>{
                 console.log("choseOption ----->>>>> ",chosedOption)
                 setTravelType(chosedOption);
@@ -29,13 +28,12 @@ const TravelType = () => {
                                         <TravelTypeOption onOptionChoose={onOptionChooseHandler}/>
                                 </div> 
                                 <div className="travelTypeResult">
-                                        {travelType === "ski" && <Ski/>}     
+                                        {travelType === "ski" && <Ski />}     
                                         {travelType === "beach" && <Beach/>}     
                                         {travelType === "relax" && <Relax/>}     
                                         {travelType === "outdoor" && <Outdoor/>}     
                                         {travelType === "romance" && <Romance/>}     
                                         {travelType === "city" && <City/>}     
-                                        {travelType === "food" && <Food/>}     
                                 </div>
                         </div>
 

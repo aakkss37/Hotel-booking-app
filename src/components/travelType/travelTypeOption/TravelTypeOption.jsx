@@ -1,12 +1,12 @@
 import './travelTypeOption.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faSmile,  } from '@fortawesome/free-regular-svg-icons';
-import { faBowlFood, faCity, faPersonBiking, faPersonSkiing, faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons';
+import { faCity, faPersonBiking, faPersonSkiing, faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons';
 import React, {useState} from 'react'
 
 
 const TravelTypeOption = (props) => {
-        const [activeOption, setActiveOption] = useState('');
+        const [activeOption, setActiveOption] = useState('ski');
         const onClickHandler = (clickedOption)=>{
                 setActiveOption(clickedOption);
                 props.onOptionChoose(clickedOption);
@@ -38,10 +38,6 @@ const TravelTypeOption = (props) => {
                         <div className={`travelTypeIcon ${activeOption === 'city' && " active"}`} onClick={() => { onClickHandler('city') }}>
                                 <FontAwesomeIcon icon={faCity} />
                                 <span> City</span>
-                        </div>
-                        <div className={`travelTypeIcon ${activeOption === 'food' && " active"}`} onClick={() => { onClickHandler('food') }}>
-                                <FontAwesomeIcon icon={faBowlFood} />
-                                <span> Food</span>
                         </div>
                 </div>
         )
