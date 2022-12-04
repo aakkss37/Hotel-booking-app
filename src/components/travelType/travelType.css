@@ -1,0 +1,29 @@
+.travelType{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        max-width: 1240px;
+        width: 100%;
+}
+
+/* .travelTypeText{
+
+} */
+
+.travelTypeText h1{
+        font-weight: 900;
+        line-height: 2.5rem;
+}
+.travelTypeText p {
+        line-height: 1.3rem;
+}
+
+/* .travelTypeContainer{
+
+} */
+
+.travelTypeResult{
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}

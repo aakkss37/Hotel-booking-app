@@ -1,5 +1,4 @@
 import './card.css';
-
 import React from 'react';
 
 const Card = (props) => {
@@ -10,11 +9,9 @@ const Card = (props) => {
                         <div className="card-content">
                                 <h2>{props.title}</h2>
                                 <p>{props.content}</p>
-                                {props.price && <h4>Rs.`${props.price}`</h4>}
+                                {props.price && <h4>{props.price}</h4>}
                         </div>
                 </div>
-
-
         );
 }
 

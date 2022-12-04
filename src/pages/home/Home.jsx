@@ -18,15 +18,21 @@ const Home = () => {
             <div className="browswPropertyType__text">
               <h1 className='homeTitle'>Browse by property type.</h1>
               <span className='quote'>
-                The world’s top places to celebrate life. <br/>
-                Let your imagination run wild in these top spooky places to celebrate Halloween.
+                The world’s top places to celebrate life. Let your imagination run wild in these top spooky places to celebrate Halloween.
               </span>
             </div>
             <PropertyType />
           </div>
+        </div>
+      </section>
+
+
+      <section className='travelAroundAsia'>
+        <div className="travelAroundAsiaContainer">
           <TravelType />
         </div>
       </section>
+
     </div>
   )
 }

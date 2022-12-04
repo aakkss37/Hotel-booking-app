@@ -1,0 +1,26 @@
+.travelTypeCardContainer {
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 30px;
+        /* flex-wrap: wrap; */
+        overflow-x: scroll;
+}
+.travelTypeCardContainer::-webkit-scrollbar {
+        background-color: gray;
+}
+
+.travelTypeContainer .card {
+        max-width: 250px;
+        margin: 0px;
+        margin-bottom: 5px;
+}
+
+.travelTypeContainer .card img{
+        width: 100%;
+        height: 200px;
+}
+.travelTypeContainer .card h2{
+       font-size: 1.3rem; 
+}

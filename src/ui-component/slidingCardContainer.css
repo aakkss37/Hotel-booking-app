@@ -10,10 +10,10 @@
         display: flex;
         border-radius: 6px;
         color: #333;
-        overflow-x: auto;
         position: relative;
+        overflow-x: auto;
 }
-.cards-container::-webkit-scrollbar {
+.cards-container::-webkit-scrollbar {   /*to hide the scrolebar*/
         display: none;
 }
 

@@ -1,0 +1,33 @@
+.travelTypeOptionContainer{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        gap: 3rem;
+}
+
+.travelTypeIcon{
+        border: 1px solid rgb(255, 48, 2);       
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 15px;
+}
+
+.travelTypeIcon:hover {
+        cursor: pointer;
+        animation: text-pop 0.2s both;
+}
+
+@keyframes text-pop {
+        0% {
+                transform: translateY(0);
+        }
+        100% {
+                transform: translateY(-6px);
+        }
+}
+
+.travelTypeIcon.active{
+        background: rgb(255, 48, 2);
+}

@@ -1,24 +1,43 @@
+/* *****Featured and PropertyType****** */
 .homeSection {
         display: flex;
         justify-content: center;
 }
+
 .homeContainer {
         margin-top: 50px;
         margin-bottom: 50px;
         width: 100%;
         max-width: 1240px;
 }
-.browswPropertyType{
+
+.browswPropertyType {
         margin: 0;
         padding: 0;
 }
-.browswPropertyType__text{
+
+.browswPropertyType__text {
         color: rgb(255, 48, 2);
         margin: 30px 5px;
         margin-bottom: 5px;
         padding-left: 10px;
 }
-.browswPropertyType__text .quote{
+
+.browswPropertyType__text .quote {
         font-weight: 500;
         color: rgb(66, 66, 66);
+}
+
+
+
+/* ********Travel type******** */
+.travelAroundAsia {
+        padding: 5px;
+        color: white;
+        background: var(--color-bg);
+}
+
+.travelAroundAsiaContainer{
+        display: flex;
+        justify-content: center;
 }
