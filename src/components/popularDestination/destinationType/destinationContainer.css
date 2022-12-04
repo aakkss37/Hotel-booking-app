@@ -1,0 +1,41 @@
+/* ***************************** */
+/* ***************************** */
+/* ***************************** */
+/*This style is applied o  all destination Type*/
+/* ***************************** */
+/* ***************************** */
+/* ***************************** */
+
+.destinationContainer {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+}
+
+.destinationProperties {
+        margin-right: 60px;
+}
+
+.destinationProperties h4 {
+        font-size: 13px;
+}
+
+
+.destinationProperties p.discription {
+        font-size: 10px;
+}
+
+.destinationProperties p.price {
+        font-size: 12px;
+        line-height: 1.3rem;
+}
+
+.destinationProperties:hover {
+        color: rgb(255, 48, 2);
+        cursor: pointer;
+}
+
+.destinationProperties:hover p {
+        color: rgb(145, 145, 145);
+}

@@ -1,0 +1,34 @@
+.popularDestinationContainer {
+        width: 100%;
+        max-width: 1240px;
+}
+
+.popularDestinationContainer .popularDestinationContainerTitle {
+        margin-top: 20px;
+        margin-bottom: 30px;
+}
+
+.popularDestinationContainer .destinationType {
+        display: flex;
+        gap: 50px;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+}
+
+.popularDestinationContainer .destinationType button{
+        padding: 10px;
+        color: white;
+        background-color: rgba(255, 48, 2, 0.068);
+        border-radius: 15px;
+        border: 1px solid rgb(255, 48, 2);
+        cursor: pointer;
+}
+
+.popularDestinationContainer .destinationType button.action {
+        background-color: rgb(255, 48, 2);
+}
+
+/* .destinations {
+        border: 2px solid red;
+} */

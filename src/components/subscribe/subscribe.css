@@ -1,0 +1,48 @@
+.subsribeContainer {
+        text-align: center;
+        width: 100%;
+        max-width: 1240px;
+}
+
+.subsribeContainer .subscribeContainerText {
+        margin: 20px;
+}
+
+
+.subsribeContainer h1 {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.5rem;
+}
+
+.subsribeContainer input {
+        font-size: 20px;
+        line-height: 28px;
+        color: rgb(107 107 107);
+        border-radius: 3px;
+        font-weight: 100;
+        padding: 10px;
+        width: 65%;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px solid rgb(255, 48, 2);
+        max-width: 400px;
+}
+
+.subsribeContainer form button {
+        border-radius: 5px;
+        border: 0;
+        padding: 10px 20px;
+        font-size: 15px;
+        /* line-height: 28px; */
+        font-weight: 500;
+        height: 48px;
+        background-color: rgb(255 48 2);
+        box-shadow: none;
+        margin: 0 20px;
+        color: white;
+        cursor: pointer;
+}
+.subsribeContainer form button:hover{
+        background-color: rgba(255, 48, 2, 0.39);
+}

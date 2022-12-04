@@ -8,9 +8,30 @@
         /* flex-wrap: wrap; */
         overflow-x: scroll;
 }
+/* width */
 .travelTypeCardContainer::-webkit-scrollbar {
-        background-color: gray;
+        height: 7px;
 }
+
+/* Track */
+.travelTypeCardContainer::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 5px;
+}
+
+/* Handle */
+.travelTypeCardContainer::-webkit-scrollbar-thumb {
+        background: rgb(255, 48, 2);
+        border-radius: 10px;
+}
+
+/* Handle on hover */
+.travelTypeCardContainer::-webkit-scrollbar-thumb:hover {
+        background: #b30000;
+}
+
+
+
 
 .travelTypeContainer .card {
         max-width: 250px;

@@ -37,7 +37,33 @@
         background: var(--color-bg);
 }
 
-.travelAroundAsiaContainer{
+.travelAroundAsiaContainer {
         display: flex;
         justify-content: center;
+}
+
+
+
+
+/************ Popular Destination **************/
+.popularDestination {
+        padding: 5px;
+        color: white;
+        background: var(--color-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+}
+
+
+/************ Subscription Form **************/
+.subscribe {
+        padding: 5px;
+        color: white;
+        background: var(--color-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
 }

@@ -2,7 +2,9 @@ import React from 'react'
 import Featured from '../../components/featured/Featured';
 import Header from '../../components/header/header';
 import Navbar from '../../components/navbar/Navbar'
+import PopularDestination from '../../components/popularDestination/PopularDestination';
 import PropertyType from '../../components/propertyType/PropertyType';
+import Subscribe from '../../components/subscribe/Subscribe';
 import TravelType from '../../components/travelType/TravelType';
 import "./home.css"
 
@@ -10,7 +12,11 @@ const Home = () => {
   return (
     <div>
       <Navbar />
+
+
       <Header />
+
+
       <section className='homeSection'>
         <div className="homeContainer">
           <Featured />
@@ -33,6 +39,16 @@ const Home = () => {
         </div>
       </section>
 
+
+
+      <section className='popularDestination'>
+        <PopularDestination/>
+      </section>
+
+
+      <section className='subscribe'>
+        <Subscribe/>
+      </section>
     </div>
   )
 }
