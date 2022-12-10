@@ -3,15 +3,15 @@ import { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
 
-const Backdrop = (props) => {
+const Backdrop = () => {
         return <div className="backdrop" />;
 };
 
-const ModalOverlay = (props) => {
+const ModalOverlay = () => {
         return (
                 <div className="modal">
                         <div className="content">
-                                <h1>Sorry! This application does not support mobile screen.</h1>
+                                <h2>Sorry! This application does not support mobile screen.</h2>
                                 <p>Please revisit the site with a tab/laptop/desktop size screen.</p>
                         </div>
                 </div>
@@ -20,7 +20,7 @@ const ModalOverlay = (props) => {
 
 const portalElement = document.getElementById('overlay');
 
-const OverLay = (props) => {
+const OverLay = () => {
         return (
                 <Fragment>
                         {ReactDOM.createPortal(<Backdrop />, portalElement)}
