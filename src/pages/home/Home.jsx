@@ -1,5 +1,6 @@
 import React from 'react'
 import Featured from '../../components/featured/Featured';
+import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/header';
 import Navbar from '../../components/navbar/Navbar'
 import PopularDestination from '../../components/popularDestination/PopularDestination';
@@ -42,12 +43,22 @@ const Home = () => {
 
 
       <section className='popularDestination'>
-        <PopularDestination/>
+        <PopularDestination />
       </section>
 
 
       <section className='subscribe'>
-        <Subscribe/>
+        <Subscribe />
+      </section>
+
+
+      <section className='footer'>
+        <Footer />
+      </section>
+
+
+      <section className='lastLine'>
+        <p className='lastLine'>Copyright © 2022 – 2024 aksbookings.com™. All rights reserved. Amar kumar</p>
       </section>
     </div>
   )
