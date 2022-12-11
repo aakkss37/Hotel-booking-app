@@ -20,6 +20,7 @@
         font-family: var(--font-family);
         display: flex;
         align-items: center;
+        cursor: pointer;
 }
 .logo h1{
         font-family: var(--font-family);

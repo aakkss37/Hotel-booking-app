@@ -7,7 +7,7 @@ import {format} from 'date-fns' // --> To transform the date into a readable Str
 const DatePicker = (props) => {
 
         const [showDatePicker, setShowDatePicker] = useState(false)        
-        const [data, setDate] = useState([
+        const [date, setDate] = useState([
                 {
                         startDate: new Date(),
                         endDate: new Date(),
@@ -15,19 +15,21 @@ const DatePicker = (props) => {
                 }
         ]);
 
+        props.onAddDate(date)
         
         return (
                 <>
                         <span className="headerSearchText" onClick={() => { setShowDatePicker(!showDatePicker) }}>
-                                {`${format(data[0].startDate, "dd/MM/yyyy")} to ${format(data[0].endDate, "dd/MM/yyyy")}`}
+                                {`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(date[0].endDate, "dd/MM/yyyy")}`}
                         </span>
-                        {showDatePicker &&
+                        {
+                        showDatePicker &&
                         <div className='date'>
                                 <DateRange
                                         editableDateInputs={true}
                                         onChange={item => setDate([item.selection])}
                                         moveRangeOnFirstSelection={false}
-                                        ranges={data}
+                                        ranges={date}
                                 />
                         </div>
                         }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./guestPicker.css"
-export default function GuestPicker() {
+export default function GuestPicker(props) {
 
         const [showOption, setShowOption] = useState(false);
 
@@ -10,7 +10,9 @@ export default function GuestPicker() {
                 room: 1
         });
 
-        const substractEventHandler = (person) => {
+        props.onAddGuest(guest); //sending guest detail to upper classe header.jsx
+
+        const substractGuestEventHandler = (person) => {
                 if (person === "adult" && guest.adult > 1) {
                         setGuest((previousState) => {
                                 return {
@@ -40,8 +42,9 @@ export default function GuestPicker() {
                 }
         }
 
+
         
-        const addEventHander = (person) => {
+        const addGuestEventHander = (person) => {
                 
                 if (person === "adult" && guest.adult < 9)  {
                         setGuest((previousState) => {
@@ -72,9 +75,10 @@ export default function GuestPicker() {
                 }
         }
 
-        const addGuestHnadler = () => {
+        const addGuest = () => {
                 setShowOption(false);
         }
+        
         return (
 
                 <>
@@ -88,28 +92,28 @@ export default function GuestPicker() {
                                         <div className="optionItem">
                                                 <span className="optionText">Adult</span>
                                                 <div className="optionInput">
-                                                                <button className="decreaseCount" onClick={() => { substractEventHandler("adult") }}>-</button>
+                                                                <button className="decreaseCount" onClick={() => { substractGuestEventHandler("adult") }}>-</button>
                                                         <input className='guestInput' type="text" value={guest.adult} disabled />
-                                                        <button className="increaseCount" onClick={()=>{addEventHander("adult")}}>+</button>
+                                                        <button className="increaseCount" onClick={() => { addGuestEventHander("adult") }}>+</button>
                                                 </div>
                                         </div>
                                         <div className="optionItem">
                                                 <span className="optionText">Children</span>
                                                 <div className="optionInput">
-                                                                <button className="decreaseCount" onClick={() => { substractEventHandler("child") }}>-</button>
+                                                                <button className="decreaseCount" onClick={() => { substractGuestEventHandler("child") }}>-</button>
                                                         <input className='guestInput' type="text" value={guest.children} disabled />
-                                                        <button className="increaseCount" onClick={()=>{addEventHander("child")}}>+</button>
+                                                        <button className="increaseCount" onClick={() => { addGuestEventHander("child") }}>+</button>
                                                 </div>
                                         </div>
                                         <div className="optionItem">
                                                 <span className="optionText">Room</span>
                                                 <div className="optionInput">
-                                                                <button className="decreaseCount" onClick={() => { substractEventHandler("room") }}>-</button>
+                                                                <button className="decreaseCount" onClick={() => { substractGuestEventHandler("room") }}>-</button>
                                                         <input className='guestInput' type="text" value={guest.room} disabled />
-                                                        <button className="increaseCount" onClick={()=>{addEventHander("room")}}>+</button>
+                                                        <button className="increaseCount" onClick={() => { addGuestEventHander("room") }}>+</button>
                                                 </div>
                                         </div>
-                                        <button className="add" onClick={addGuestHnadler}>Add</button>
+                                        <button className="add" onClick={addGuest}>Add</button>
                                 </div>
                         }
                 </>
