@@ -6,26 +6,27 @@ const HotelCard = (props) => {
                 <div className='hotelCard'>
 
                         <div className="hotelImage">
-                                <img src="https://r1imghtlak.mmtcdn.com/082f1ae6330211eb9c050242ac110004.jpg?&output-quality=75&downsize=583:388&output-format=jpg" alt="hotel img" />
+                                <img src={props.img} alt="hotel img" />
                         </div>
 
                         <div className="hotelDiscription">
-                                <h1 className="hotelName"> Hotel paradice </h1>
-                                <span className='hotelDist'>500m from airport</span>
-                                <p className='freeAcomodation'>free acomodation</p>
-                                <h1 className='roomType'>Delux | Super Delux</h1>
-                                <span>Room size</span>
-                                <p>cancilation</p>
-                                <span>if there is any offer</span>
+                                <h1 className="hotelName"> {props.hotelName} </h1>
+                                <span className='hotelDist'>{props.distance}</span>
+                                <p className='freeAccommodation'>{props.free}</p>
+                                <h1 className='roomType'>{props.roomType}</h1>
+                                <span className='roomDetail'>{props.roomDetail}</span>
+                                <p className='couple'>{props.couple}</p>
+                                <p className='cancellationPolicy'>Free cancellation</p>
+
+                                <span className='lockOffer'>You can cancel it later, so let's lock the room at this grate price today!</span>
                         </div>
 
                         <div className="hotelOverview">
                                 <div className="hotelRating">
-                                        <h3>Quality</h3>
-                                        <p>rating</p>
+                                        <p>{props.rating}</p>
                                 </div>
                                 <div className="hotelPrice">
-                                        <h3>Rs.789</h3>
+                                        <h2>Rs.{props.price}</h2>
                                         <p>Included all taxes.</p>
                                         <button className='checkout'>Check details</button>
                                 </div>

@@ -8,10 +8,13 @@
         border-radius: 5px;
         padding: 10px;
         margin-bottom: 10px;
+        cursor: pointer;
 }
 
 .hotelCard:hover {
         box-shadow: 0 2px 0.5rem -2px #000;
+        border: 1px solid rgb(255, 48, 2);
+        background-color: rgba(255, 48, 2, 0.034); 
 }
 
 .hotelImage {
@@ -20,9 +23,11 @@
         height: fit-content;
 }
 
+
 .hotelDiscription {
         flex: 2;
-        min-width: 250px;
+        min-width: 200px;
+        align-self: center;
 }
 
 .hotelOverview {
@@ -32,6 +37,112 @@
         justify-content: space-between;
         text-align: end;
 }
+
+
+/* *CARD CONTET DESIGN* */
+/*hotelDiscription*/
+.hotelImage>img {
+        width: 250px;
+        height: 200px;
+        border-radius: 5px;
+}
+
+.hotelDiscription>.hotelName {
+        font-size: 1.5rem;
+        line-height: 12px;
+}
+
+.hotelDiscription>.hotelDist {
+        font-size: 10px;
+        color: gray;
+}
+
+.hotelDiscription>.freeAccommodation {
+        background-color: rgb(255, 48, 2);
+        color: white;
+        padding: 3px;
+        margin: 7px;
+        margin-left: 0;
+        border-radius: 5px;
+        width: fit-content;
+        font-size: small;
+}
+
+.hotelDiscription>.roomType {
+        font-size: 15px;
+        color: gray;
+        margin: 7px;
+        margin-left: 0;
+        margin-top: 0;
+}
+.hotelDiscription>.roomDetail {
+        font-size: 12px;
+        line-height: 30px;
+}
+
+.hotelDiscription>.couple{
+        font-size: 12px;
+        font-weight: 700;
+        color: gray;
+}
+
+.hotelDiscription>.cancellationPolicy {
+        color: rgb(5, 143, 0);
+        margin: 10px;
+        margin-left: 0;
+        font-weight: 600;
+}
+
+.hotelDiscription>.lockOffer {
+        color: rgb(255, 48, 2);
+        margin: 10px;
+        margin-left: 0;
+        font-size: 10px;
+}
+
+/*hotelOverview*/
+.hotelOverview>.hotelRating{
+       display: flex;
+       justify-content: flex-end;     
+}
+
+.hotelOverview>.hotelRating>p {
+       background-color: rgb(5, 143, 0);
+       color: white;
+       padding: 3px;
+       border-radius: 5px;
+       height: fit-content;
+}
+
+.hotelOverview>.hotelPrice>h2 {
+        font-weight: 500;
+}
+
+.hotelOverview>.hotelPrice>p {
+        font-size: small;
+        color: gray;
+}
+
+.hotelOverview>.hotelPrice>button.checkout {
+        background-color: rgb(255, 48, 2);
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+}
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 860px) {
@@ -48,35 +159,4 @@
                 width: 150px;
                 height: 130px;
         }
-}
-
-/* *CARD CONTET DESIGN* */
-
-.hotelImage>img{
-        width: 250px;
-        height: 200px;
-        border-radius: 5px;
-}
-
-.hotelDiscription>.hotelName{
-        font-size: 1.5rem;   
-        line-height: 12px;    
-}
-.hotelDiscription>.hotelDist{
-        font-size: 10px;
-        color: gray;
-}
-.hotelDiscription>.freeAcomodation{
-        background-color: rgb(255, 48, 2);
-        color: white;
-        padding: 3px;
-        margin: 3px;
-        margin-left: 0;
-        border-radius: 5px;
-        width: fit-content;
-        font-size: small;
-}
-.hotelDiscription>.roomType{
-        font-size: 15px;
-        color: gray;
 }
