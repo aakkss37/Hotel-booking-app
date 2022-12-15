@@ -67,3 +67,7 @@
         cursor: pointer;
         font-size: 12.5px;
 }
+.invalidInput::placeholder{
+        color: red;
+        font-weight: 500;
+}

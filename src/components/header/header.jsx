@@ -13,18 +13,24 @@ const Header = (props) => {
         const [date, setDate] = useState();                     //monitoring the date of booking
         const [guests, setGuests] = useState();                 //monitoring the no. of guest
         const navigate = useNavigate();                         //on search click.. redirect to hotel-list page
-        const [isDestinationValid, setDestinationValid] = useState(false);
-        const [isDestinationTouched, setIsDestinationTouchded] = useState(false);
 
+
+        // FORM VALID
+        const [isDestinationValid, setDestinationValid] = useState(false);
+        const [isDestinationTouched, setIsFormTouched] = useState(false);
         const destinationHandler = (event)=>{
-                setIsDestinationTouchded(true)
+                setDestinationValid(true);
                 const destiny = event.target.value.toLowerCase();
                 setDestination(destiny)
+        
+                if(destiny.trim().length === 0){
+                        console.log("destination ---> invalid")
+                        setDestinationValid(false);
+                }
         }
         const blurHandler = ()=>{
-                setIsDestinationTouchded(true);
+                setIsFormTouched(true);
         }
-
 
         const guestAddHendler = (guest)=>{
                 setGuests(guest);
@@ -34,15 +40,19 @@ const Header = (props) => {
                 setDate(date);
         }
 
-        const hotelSearchHandler = ()=>{
+        const hotelSearchHandler = (event)=>{
+                event.preventDefault();
+                setIsFormTouched(true);
                 console.log('search Clicked')
-
-                //On search click.. redirect to /hotel-list page with the current state of 
-                // element passed in state option
-
-                navigate("/hotels-list", {state: {destination, date, guests}});
-
+                if (destination.trim().length !== 0){
+                        //On search click.. redirect to /hotel-list page with the current state of 
+                        // element passed in state option
+                        navigate("/hotels-list", {state: {destination, date, guests}});
+                }
+                console.log('invalid form')
         }
+        const formInvalid = !isDestinationValid && isDestinationTouched;
+
 
         return (
 
@@ -63,14 +73,13 @@ const Header = (props) => {
                                                         <p className="headerDiscount">Get rewarded for your travels - unlock instabt saving of 20% or more with a free aksbookings.com account.</p>
                                                         <button className="headerBtn">Sign in / Regester</button>
                                                 </div>
-
                                                 <div className="headerSearch">
                                                         <div className="headerSearchItem">
-                                                                <FontAwesomeIcon icon={faBed} className="headerIcon" />
+                                                                <FontAwesomeIcon icon={faBed} className="headerIcon" style={formInvalid ? { color: "red" } : {color: "gray"}}/>
                                                                 <input
                                                                         type="text"
-                                                                        placeholder="Where are you going?"
-                                                                        className="headerSearchInput"
+                                                                        placeholder={`${formInvalid ? "Please enter the destination." : "Where are you going?"}`}
+                                                                        className={`${formInvalid ? "invalidInput headerSearchInput" : "headerSearchInput"}`}
                                                                         onChange={destinationHandler}
                                                                         onBlur={blurHandler}
                                                                 />
