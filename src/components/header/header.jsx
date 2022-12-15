@@ -12,12 +12,19 @@ const Header = (props) => {
         const [destination, setDestination] = useState("");     //monitoring the destination of user
         const [date, setDate] = useState();                     //monitoring the date of booking
         const [guests, setGuests] = useState();                 //monitoring the no. of guest
-        const navigate = useNavigate()                          //on search click.. redirect to hotel-list page
-
+        const navigate = useNavigate();                         //on search click.. redirect to hotel-list page
+        const [isDestinationValid, setDestinationValid] = useState(false);
+        const [isDestinationTouched, setIsDestinationTouchded] = useState(false);
 
         const destinationHandler = (event)=>{
-                setDestination(event.target.value)
+                setIsDestinationTouchded(true)
+                const destiny = event.target.value.toLowerCase();
+                setDestination(destiny)
         }
+        const blurHandler = ()=>{
+                setIsDestinationTouchded(true);
+        }
+
 
         const guestAddHendler = (guest)=>{
                 setGuests(guest);
@@ -32,7 +39,8 @@ const Header = (props) => {
 
                 //On search click.. redirect to /hotel-list page with the current state of 
                 // element passed in state option
-                navigate("/hotels-list", {state: {destination, date, guests}})
+
+                navigate("/hotels-list", {state: {destination, date, guests}});
 
         }
 
@@ -64,6 +72,7 @@ const Header = (props) => {
                                                                         placeholder="Where are you going?"
                                                                         className="headerSearchInput"
                                                                         onChange={destinationHandler}
+                                                                        onBlur={blurHandler}
                                                                 />
                                                         </div>
                                                         <div className="headerSearchItem">

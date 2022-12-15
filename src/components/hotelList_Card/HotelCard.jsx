@@ -11,6 +11,7 @@ const HotelCard = (props) => {
 
                         <div className="hotelDiscription">
                                 <h1 className="hotelName"> {props.hotelName} </h1>
+                                <span className='hotelDist'>{props.address}</span> <br />
                                 <span className='hotelDist'>{props.distance}</span>
                                 <p className='freeAccommodation'>{props.free}</p>
                                 <h1 className='roomType'>{props.roomType}</h1>

@@ -1,7 +1,7 @@
 import './listSearch.css'
 
 import React, {useState} from 'react'
-import { useLocation } from 'react-router-dom' 
+import { useLocation } from 'react-router-dom' // it will recieve the data from useNaigation hook which is present from where this page(where this component is present) is redirected
 import { format } from 'date-fns' // --> To transform the date into a readable String
 import { DateRange } from 'react-date-range'// for Date Picker
 import 'react-date-range/dist/styles.css'; // main style file
@@ -10,13 +10,12 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 const ListSearch = () => {
         //carring the location of current page and state of the elements which is passed 
         // in the useNavigate hook.
-        const location = useLocation(); 
-        const [destination, setDestination] = useState(location.state.destination);     
+        const location = useLocation();
+        const destination = location.state.destination; 
         const [date, setDate] = useState(location.state.date);                    
         const [guests, setGuests] = useState(location.state.guests);
         const [showDatePicker, setShowDatePicker] = useState(false) 
 
-        console.log(guests)
         const guestUpdateHendler = (changedItem, changedValue)=>{
                 if (changedItem === 'ADULT'){
                         setGuests({
@@ -42,13 +41,11 @@ const ListSearch = () => {
         }
 
 
-        console.log(guests)
+
         return (
                 <div className='searchSection'>
-                        <h1 className='searchTitle'>Search</h1>
                         <div className="searchItem">
-                                <lable>Destination </lable>
-                                <input placeholder={destination} type='text' onChange={(event)=>{setDestination(event.target.value)}} />
+                                <h2>{destination}</h2>
                         </div>
                         <div className="searchItem">
                                 <lable>Check-in Date: </lable>
